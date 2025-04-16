@@ -2,6 +2,8 @@
 
 Simplified OCIO configs for CG by Brian Hanke. Based on the ASWF CG configs.
 
+Naming is based on OpenColorIO version: bhgc21.ocio is OCIO 2.1 and ACES 1.3; bhgc24.ocio is OCIO 2.4 and ACES 2.0.
+
 **Features**
 
 - Streamlined to include only the core items needed for CG rendering and compositing.
