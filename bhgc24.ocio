@@ -5,7 +5,7 @@ environment:
 search_path: ""
 strictparsing: true
 luma: [0.2126, 0.7152, 0.0722]
-name: bhgc2025
+name: bhgc24
 description: |
   Version 2025.4.0, April 16, 2025.
 
