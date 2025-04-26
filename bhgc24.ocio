@@ -38,7 +38,7 @@ displays:
     - !<View> {name: Rec.709, view_transform: ACES 2.0 - SDR 100 nits (Rec.709), display_colorspace: Rec.1886 Rec.709 - Display}
     - !<View> {name: Raw, colorspace: Raw}
 
-inactive_colorspaces: [CIE XYZ-D65, sRGB - Display, Rec.1886 Rec.709 - Display]
+inactive_colorspaces: [CIE XYZ-D65]
 
 view_transforms:
   - !<ViewTransform>
@@ -230,32 +230,3 @@ colorspaces:
     categories: [file-io, texture]
     encoding: data
     allocation: uniform
-
-  - !<ColorSpace>
-    name: sRGB neutral
-    family: Utility
-    equalitygroup: ""
-    bitdepth: 32f
-    description: For neutral input and output of images on sRGB - Display ACES 2.0 - SDR 100 nits (Rec.709) displays.
-    isdata: false
-    categories: [file-io, texture]
-    allocation: uniform
-    from_reference: !<GroupTransform>
-      children:
-        - !<DisplayViewTransform> {src: ACES2065-1, display: ACES, view: sRGB}
-        - !<RangeTransform> {min_in_value: 0., min_out_value: 0., max_in_value: 1., max_out_value: 1.}
-
-  - !<ColorSpace>
-    name: Rec.709 neutral
-    aliases: [Gamma2.2]
-    family: Utility
-    equalitygroup: ""
-    bitdepth: 32f
-    description: For neutral input and output of images on Rec.1886 Rec.709 - Display ACES 2.0 - SDR 100 nits (Rec.709) displays.
-    isdata: false
-    categories: [file-io, texture]
-    allocation: uniform
-    from_reference: !<GroupTransform>
-      children:
-        - !<DisplayViewTransform> {src: ACES2065-1, display: ACES, view: Rec.709}
-        - !<RangeTransform> {min_in_value: 0., min_out_value: 0., max_in_value: 1., max_out_value: 1.}
